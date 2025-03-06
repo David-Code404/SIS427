@@ -113,8 +113,8 @@
 
             // Simulamos un usuario registrado
             const userData = {
-                username: "admin",
-                password: "1234"
+                username: "David",
+                password: "Programing12"
             };
             
             localStorage.setItem("user", JSON.stringify(userData));
@@ -128,8 +128,8 @@
                 const storedUser = JSON.parse(localStorage.getItem("user"));
 
                 if (storedUser && username === storedUser.username && password === storedUser.password) {
-                    alert("Inicio de sesión exitoso");
-                    window.location.href = "dashboard.html"; // Redirigir a otra página
+                    alert("Inicio de sesión correctamente");
+                    window.location.href = "welcome.html"; // Redirigir a otra página
                 } else {
                     errorMessage.textContent = "Usuario o contraseña incorrectos";
                 }
